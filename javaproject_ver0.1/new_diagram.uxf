@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>18</x>
+      <y>297</y>
+      <w>450</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>javaproject1::Group
+--
+-ui: UserInfo
+-minAge: int
+-maxAge: int
+--
++Group(): ctor
++Group(int minAge, int maxAge, String gender, int onlineTime, String city): ctor
++getUi(): UserInfo
++setUi(UserInfo ui): void
++getMinAge(): int
++setMinAge(int minAge): void
++getMaxAge(): int
++setMaxAge(int maxAge): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>297</y>
+      <w>369</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>javaproject1::Customer
+--
+~ui: UserInfo
+~age: int
+--
++Customer(UserInfo ui, int age): ctor
++Customer(): ctor
++Customer(int age, String gender, int onlineTime, String city): ctor
++getUi(): UserInfo
++setUi(UserInfo ui): void
++getAge(): int
++setAge(int age): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>117</x>
+      <y>0</y>
+      <w>657</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>javaproject1::UserInfo
+--
+-gender: String
+-onlineTime: int
+-city: String
+--
++UserInfo(): ctor
++UserInfo(String gender, int onlineTime, String city): ctor
++getGender(): String
++setGender(String gender): void
++getOnlineTime(): int
++setOnlineTime(int onlineTime): void
++getCity(): String
++setCity(String city): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>234</x>
+      <y>621</y>
+      <w>477</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>javaproject1::JavaProject
+--
++sc = new Scanner(System.in): Scanner
++groupSet = new Group[3]: Group[]
++user = null: Customer[]
++classifyGroupA = null: int[]
++classifyGroupB = null: int[]
++classifyGroupC = null: int[]
+--
++main(String[] args): void
++userData(): Customer
++userDataPrint(int num): void
++groupData(): Group
++groupPrint(int num): void
++classifyCustomer(): void
++groupCheck(Customer user, int idx): boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>225</y>
+      <w>90</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;80.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>495</x>
+      <y>225</y>
+      <w>90</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>80.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>459</x>
+      <y>522</y>
+      <w>27</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

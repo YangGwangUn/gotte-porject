@@ -24,13 +24,23 @@ public class Group { // 그룹의 분류기준 설정
 		return minAge;
 	}
 	public void setMinAge(int minAge) {
-		this.minAge = minAge;
+		if(minAge > 0) {
+			this.minAge = minAge;
+		}
+		else {
+			System.out.println("최소나이 값을 잘못입력하셨습니다");
+		}
 	}
 	public int getMaxAge() {
 		return maxAge;
 	}
 	public void setMaxAge(int maxAge) {
-		this.maxAge = maxAge;
+		if(maxAge > 0) {
+			this.maxAge = maxAge;
+		}
+		else {
+			System.out.println("최대나이 값을 잘못입력하셨습니다");
+		}
 	}
 	public String toString() {
 		return String.format("minAge: %d  maxAge: %d %s",minAge,maxAge,ui);

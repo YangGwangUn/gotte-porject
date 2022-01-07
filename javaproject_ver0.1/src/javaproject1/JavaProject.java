@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class JavaProject {
 
 	public static Scanner sc = new Scanner(System.in);
-	public static Group[] groupSet = new Group[3]; // ºÐ·ù±âÁØ
-	public static Customer[] user = null; // °í°´ µ¥ÀÌÅÍ
+	public static Group[] groupSet = new Group[3]; // ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½
+	public static Customer[] user = null; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public static int[] classifyGroupA = null;
 	public static int[] classifyGroupB = null;
 	public static int[] classifyGroupC = null;
@@ -17,246 +17,255 @@ public class JavaProject {
 		int choice_sub = 0;
 		String choice_group = null;
 		int user_count = 0;
-		
+
 		while (true) {
-			System.out.println("¸ÞÀÎ¸Þ´º¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä");
-			// ¸ÞÀÎ¸Þ´º
+			System.out.println("ï¿½ï¿½ï¿½Î¸Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");
+			// ï¿½ï¿½ï¿½Î¸Þ´ï¿½
 			System.out.println("=================");
-			System.out.println("1. ±×·ì ÀÔ·Â \n2. °í°´ Á¤º¸ ÀÔ·Â \n3. ºÐ·ù °á°ú Ãâ·Â \n4. Á¾·á");
+			System.out.println("1. ï¿½×·ï¿½ ï¿½Ô·ï¿½ \n2. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ \n3. ï¿½Ð·ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ \n4. ï¿½ï¿½ï¿½ï¿½");
 			System.out.println("=================");
 			try {
-			// ¸ÞÀÎ¸Å´º ¼±ÅÃ
-			choice = sc.nextInt();
-			}catch (Exception e) {
+				// ï¿½ï¿½ï¿½Î¸Å´ï¿½ ï¿½ï¿½ï¿½ï¿½
+				choice = sc.nextInt();
+			} catch (Exception e) {
 				sc.next();
-				System.out.println("1 ~ 4 ±îÁö ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("1 ~ 4 ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			}
-			
 
-			// ¸ÞÀÎ¸Þ´º 1À» ¼±ÅÃÇßÀ»¶§
+			// ï¿½ï¿½ï¿½Î¸Þ´ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			if (choice == 1) {
-				// ¹«ÇÑ¹Ý¸ñ¹®
+				// ï¿½ï¿½ï¿½Ñ¹Ý¸ï¿½
 				while (true) {
-					// ¸ÞÀÎ¸Þ´º 1 - 1
+					// ï¿½ï¿½ï¿½Î¸Þ´ï¿½ 1 - 1
 					System.out.println("=================");
-					System.out.println("1.°í°´ ±×·ì ºÐ·ù±âÁØ \n2.±×·ì µ¥ÀÌÅÍ Ãâ·Â \n3.±×·ìµ¥ÀÌÅÍ ¼öÁ¤ \n4.µÚ·Î°¡±â");
+					System.out.println("1.ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ \n2.ï¿½×·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ \n3.ï¿½×·ìµ¥ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ \n4.ï¿½Ú·Î°ï¿½ï¿½ï¿½");
 					System.out.println("=================");
-					// ¼­ºê¸Þ´º ¼±ÅÃ
+					// ï¿½ï¿½ï¿½ï¿½Þ´ï¿½ ï¿½ï¿½ï¿½ï¿½
 					try {
-					choice_sub = sc.nextInt();
-					}catch (Exception e) {
+						choice_sub = sc.nextInt();
+					} catch (Exception e) {
 						sc.next();
-						System.out.println("1 ~ 4 ±îÁö ÀÔ·ÂÇÏ¼¼¿ä.");
+						System.out.println("1 ~ 4 ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.");
 					}
-					// ¼­ºê¸Þ´º 1-1 ¼±ÅÃ
+					// ï¿½ï¿½ï¿½ï¿½Þ´ï¿½ 1-1 ï¿½ï¿½ï¿½ï¿½
 					if (choice_sub == 1) {
-						// ¹«ÇÑ¹Ý¸ñ¹®
+						// ï¿½ï¿½ï¿½Ñ¹Ý¸ï¿½
 						try {
 							while (true) {
-								System.out.println("A,B,C Áß¿¡ ¼³Á¤ÇÒ ±×·ìÀ» ÀÔ·ÂÇÏ¼¼¿ä (µÚ·Î °¡±â back) ");
+								System.out.println("A,B,C ï¿½ß¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½ (ï¿½Ú·ï¿½ ï¿½ï¿½ï¿½ï¿½ back) ");
 								choice_group = sc.next();
-								// A¸¦ ÀÔ·ÂÇßÀ»¶§ ±×·ì ¼³Á¤
+								// Aï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ ï¿½ï¿½ï¿½ï¿½
 								if (choice_group.equals("A")) {
 									groupSet[0] = groupDataInput();
 
-									// B¸¦ ÀÔ·ÂÇßÀ»¶§ ±×·ì ¼³Á¤
+									// Bï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ ï¿½ï¿½ï¿½ï¿½
 								} else if (choice_group.equals("B")) {
 									groupSet[1] = groupDataInput();
 
-									// C¸¦ ÀÔ·ÂÇßÀ»¶§ ±×·ì ¼³Á¤
+									// Cï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ ï¿½ï¿½ï¿½ï¿½
 								} else if (choice_group.equals("C")) {
 									groupSet[2] = groupDataInput();
 
-									// µÚ·Î°¡±â
+									// ï¿½Ú·Î°ï¿½ï¿½ï¿½
 								} else if (choice_group.equals("back")) {
-									System.out.println("ÀÌÀü ¸Þ´º·Î ÀÌµ¿ ...");
+									System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ ...");
 									break;
-									// Àß¸øµÈ µ¥ÀÌÅÍ ÀÔ·ÂÇßÀ»¶§ ´Ù½Ã ÀÔ·Â
+									// ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½Ô·ï¿½
 								} else {
-									System.out.println("Àß¸øµÈ µ¥ÀÌÅÍ ÀÔ·Â");
+									System.out.println("ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½");
 								}
 
 							}
-							// ¿À·ù³¯¶§ ´Ù½Ã ¾²±â
+							// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½
 						} catch (Exception e) {
 							sc.next();
-							System.out.println("µ¥ÀÌÅÍ¸¦ Àß¸ø ÀÔ·ÂÇß½À´Ï´Ù ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä");
+							System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ß¸ï¿½ ï¿½Ô·ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½ ï¿½Ù½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");
 						}
 					}
 
-					// ¼­ºê¸Þ´º 1-2 ¼±ÅÃ ¼³Á¤µ¥ÀÌÅÍ Ãâ·Â
+					// ï¿½ï¿½ï¿½ï¿½Þ´ï¿½ 1-2 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 					else if (choice_sub == 2) {
-						System.out.println("A ±×·ì±âÁØ " + groupSet[0]);
-						System.out.println("B ±×·ì±âÁØ " + groupSet[1]);
-						System.out.println("C ±×·ì±âÁØ " + groupSet[2]);
+						System.out.println("A ï¿½×·ï¿½ï¿½ï¿½ï¿½ " + groupSet[0]);
+						System.out.println("B ï¿½×·ï¿½ï¿½ï¿½ï¿½ " + groupSet[1]);
+						System.out.println("C ï¿½×·ï¿½ï¿½ï¿½ï¿½ " + groupSet[2]);
 
 					}
-					// ¼­ºê¸Þ´º 1-3 ¼±ÅÃ±×·ì ´Ù½Ã ¼³Á¤
+					// ï¿½ï¿½ï¿½ï¿½Þ´ï¿½ 1-3 ï¿½ï¿½ï¿½Ã±×·ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½
 					else if (choice_sub == 3) {
-						// ¹Ýº¹¹®
+						// ï¿½Ýºï¿½ï¿½ï¿½
 						try {
 							while (true) {
-								System.out.println("A,B,C Áß¿¡ ´Ù½Ã ¼³Á¤ÇÒ ±×·ìÀ» ¼±ÅÃÇÏ½Ã¿À (µÚ·Î °¡±â " + " back)");
-								// A B C ±×·ì Àç¼³Á¤
+								System.out.println("A,B,C ï¿½ß¿ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ã¿ï¿½ (ï¿½Ú·ï¿½ ï¿½ï¿½ï¿½ï¿½ " + " back)");
+								// A B C ï¿½×·ï¿½ ï¿½ç¼³ï¿½ï¿½
 								choice_group = sc.next();
-								// A±×·ì ¼³Á¤
+								// Aï¿½×·ï¿½ ï¿½ï¿½ï¿½ï¿½
 								if (choice_group.equals("A")) {
 									groupDataPrint(0);
-									// B±×·ì ¼³Á¤
+									// Bï¿½×·ï¿½ ï¿½ï¿½ï¿½ï¿½
 								} else if (choice_group.equals("B")) {
 									groupDataPrint(1);
-									// C±×·ì ¼³Á¤
+									// Cï¿½×·ï¿½ ï¿½ï¿½ï¿½ï¿½
 								} else if (choice_group.equals("C")) {
 									groupDataPrint(2);
-									// µÚ·Î°¡±â
+									// ï¿½Ú·Î°ï¿½ï¿½ï¿½
 								} else if (choice_group.equals("back")) {
-									System.out.println("ÀÌÀü ¸Þ´º·Î ÀÌµ¿ ...");
+									System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ ...");
 									break;
-									// Àß¸øµÈ°ªÀ» ÀÔ·ÂÇßÀ»¶§ ´Ù½Ã ÀÔ·Â
+									// ï¿½ß¸ï¿½ï¿½È°ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½Ô·ï¿½
 								} else {
-									System.out.println("´Ù½Ã ÀÔ·Â");
+									System.out.println("[ï¿½ï¿½ï¿½ï¿½] A B Cï¿½ß¿ï¿½ ï¿½Ñ°ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½ ");
 								}
 
 							}
-							// ¿À·ù³¯¶§ ´Ù½Ã ¾²±â
+							// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½
 						} catch (Exception e) {
 							sc.next();
-							System.out.println("µ¥ÀÌÅÍ¸¦ Àß¸ø ÀÔ·ÂÇß½À´Ï´Ù ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä");
+							System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ß¸ï¿½ ï¿½Ô·ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½ ï¿½Ù½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");
 						}
 					}
-					// µÚ·Î°¡±â
+					// ï¿½Ú·Î°ï¿½ï¿½ï¿½
 					else if (choice_sub == 4) {
 						break;
-						// Àß¸øµÈ°ªÀ» ÀÔ·ÂÇßÀ»¶§ ´Ù½Ã ÀÔ·Â
+						// ï¿½ß¸ï¿½ï¿½È°ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½Ô·ï¿½
 					} else {
-						System.out.println("¸Þ´º ´Ù½Ã ÀÔ·Â");
+						System.out.println("[ï¿½ï¿½ï¿½ï¿½] ï¿½Þ´ï¿½ ï¿½Ù½ï¿½ ï¿½Ô·ï¿½");
 					}
 				}
-				// ¸ÞÀÎ¸Þ´º¿¡¼­ 2¸¦ ¼±ÅÃÇßÀ»¶§
+				// ï¿½ï¿½ï¿½Î¸Þ´ï¿½ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			} else if (choice == 2) {
-				// ¹Ýº¹¹®
+				// ï¿½Ýºï¿½ï¿½ï¿½
 				while (true) {
-					// ¸ÞÀÎ¸Þ´º 2
+					// ï¿½ï¿½ï¿½Î¸Þ´ï¿½ 2
 					System.out.println(choice);
 					System.out.println("=================");
-					System.out.println("1.°í°´Á¤º¸ ÀÔ·Â \n2.°í°´Á¤º¸ Ãâ·Â \n3.°í°´Á¤º¸ ¼öÁ¤ \n4.µÚ·Î°¡±â");
+					System.out.println("1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ \n2.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ \n3.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ \n4.ï¿½Ú·Î°ï¿½ï¿½ï¿½");
 					System.out.println("=================");
 					try {
-					choice_sub = sc.nextInt();
-					}catch (Exception e) {
+						choice_sub = sc.nextInt();
+					} catch (Exception e) {
 						sc.next();
-						System.out.println("1 ~ 4±îÁö ÀÔ·ÂÇØÁÖ¼¼");
+						System.out.println("[ï¿½ï¿½ï¿½ï¿½] 1 ~ 4ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");
 					}
 
-					// ¼­ºê¸Þ´º 2-1
+					// ï¿½ï¿½ï¿½ï¿½Þ´ï¿½ 2-1
 					if (choice_sub == 1) {
-						// µÚ·Î°¡±â
+						// ï¿½Ú·Î°ï¿½ï¿½ï¿½
 						// if (user_count == -1) {
 						// break;
 						// }
-						// ¹«ÇÑ ¹Ýº¹¹®
-						try {
+						// ï¿½ï¿½ï¿½ï¿½ ï¿½Ýºï¿½ï¿½ï¿½
+						
 							while (true) {
-								System.out.println("-1 ¸¦ ÀÔ·ÂÇÏ¸é µÚ·Î°©´Ï´Ù");
-								System.out.println("°í°´¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
-								// °í°´¼ö ÀÔ·Â (Ä«¿îÆ®)
+								try {
+								System.out.println("-1 ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¸ï¿½ ï¿½Ú·Î°ï¿½ï¿½Ï´ï¿½");
+								System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");
+								// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ (Ä«ï¿½ï¿½Æ®)
 								user_count = sc.nextInt();
-								// -1À» ´©¸£¸é µÚ·Î°¡±â
+							}catch (Exception e) {
+								sc.next();
+								System.out.println("[ï¿½ï¿½ï¿½ï¿½] ï¿½Ã¹Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½!");
+							}
+								// -1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·Î°ï¿½ï¿½ï¿½
 
 								if (user_count == -1)
 									break;
 
 								user = new Customer[user_count];
-								// null°ª Àç¼³Á¤
+								// nullï¿½ï¿½ ï¿½ç¼³ï¿½ï¿½
 								for (int i = 0; i < user.length; i++) {
 									user[i] = new Customer();
 								}
-								// °í°´ Á¤º¸ÀÔ·Â
+								try {
+								// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô·ï¿½
 								for (int i = 0; i < user.length; i++) {
-									System.out.printf("===== °í°´ %d¹ø Á¤º¸ ÀÔ·Â=====\n", i + 1);
+									System.out.printf("===== ï¿½ï¿½ï¿½ï¿½ %dï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½=====\n", i + 1);
 									user[i] = userDataInput();
+								}
+								}catch (Exception e) {
+									sc.next();
+									System.out.println("[ï¿½ï¿½ï¿½ï¿½] ï¿½Ã¹Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½!");
 								}
 
 							}
-							// ¿À·ù³¯¶§ ´Ù½Ã ¾²±â
-						} catch (Exception e) {
-							sc.next();
-							System.out.println("µ¥ÀÌÅÍ¸¦ Àß¸ø ÀÔ·ÂÇß½À´Ï´Ù ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä");
-						}
+							// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½
+						
 					}
-					// 2-2 °í°´ Á¤º¸ Ãâ·Â
+					// 2-2 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 					else if (choice_sub == 2) {
-						for (int i = 0; i < user.length; i++) {
-							System.out.printf("%d¹ø %s", i + 1, user[i]);
+						try {
+							for (int i = 0; i < user.length; i++) {
+								System.out.printf("%dï¿½ï¿½ %s", i + 1, user[i]);
+							}
+						} catch (Exception e) {
+							System.out.println("[ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½");
 						}
 					}
-					// 2-3 ¼öÁ¤ÇÒ °í°´ ÀÔ·Â
+					// 2-3 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
 					else if (choice_sub == 3) {
 
-						// ¹«ÇÑ ¹Ýº¹¹®
+						// ï¿½ï¿½ï¿½ï¿½ ï¿½Ýºï¿½ï¿½ï¿½
 						try {
 							while (true) {
 								for (int i = 0; i < user.length; i++) {
-									System.out.printf("%d¹ø %s \n", i + 1, user[i]);
+									System.out.printf("%dï¿½ï¿½ %s \n", i + 1, user[i]);
 								}
-								// ¼öÁ¤ÇÒ °í°´Á¤º¸ ¼±ÅÃ
-								System.out.println("¼öÁ¤ÇÒ °í°´À» °í¸£¼¼¿ä");
+								// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+								System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 								choice = sc.nextInt();
 								if (!(choice > 0 && choice <= user.length)) {
-									System.out.println("¼öÁ¤ÇÒ °í°´ ¹øÈ£¸¦ ´Ù½Ã ÀÔ·ÂÇÏ½Ã¿À");
+									System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½Ô·ï¿½ï¿½Ï½Ã¿ï¿½");
 									continue;
 
 								}
 
 								user[choice - 1] = userDataInput();
 								for (int i = 0; i < user.length; i++) {
-									System.out.printf("%d¹ø %s \n", i + 1, user[i]);
+									System.out.printf("%dï¿½ï¿½ %s \n", i + 1, user[i]);
 								}
 
 								break;
 
-							} // ¿À·ù³¯¶§ ´Ù½Ã ¾²±â
+							} // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½
 						} catch (Exception e) {
 							sc.next();
-							System.out.println("µ¥ÀÌÅÍ¸¦ Àß¸ø ÀÔ·ÂÇß½À´Ï´Ù ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä");
+							System.out.println("[ï¿½ï¿½ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ß¸ï¿½ ï¿½Ô·ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½ ï¿½Ù½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½");
 						}
-						// ¸ÞÀÎ¸Þ´º 4¹øÀ» ´©¸£¸é
+						// ï¿½ï¿½ï¿½Î¸Þ´ï¿½ 4ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 					} else if (choice_sub == 4) {
-						// µÚ·Î°¡±â
+						// ï¿½Ú·Î°ï¿½ï¿½ï¿½
 						break;
-						// Àß¸øµÈ µ¥ÀÌÅÍ ÀÔ·Â½Ã ´Ù½ÃÀÔ·Â
+						// ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â½ï¿½ ï¿½Ù½ï¿½ï¿½Ô·ï¿½
 					} else {
-						System.out.println("¿À·ù ´Ù½Ã ÀÔ·Â");
+						System.out.println("[ï¿½ï¿½ï¿½ï¿½] 1 ~ 4 ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½ï¿½ï¿½");
 					}
 
 				}
 			}
-			// ¸ÞÀÎ 3¹ø °í°´Á¤º¸ Ãâ·Â
+			// ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 
 			else if (choice == 3) {
 				try {
-				classifyCustomer();
-				for (int i = 0; i < classifyGroupA.length; i++) {
-					System.out.printf("±×·ìA %d %s \n", i + 1, user[classifyGroupA[i]]);
-					
+					classifyCustomer();
+					for (int i = 0; i < classifyGroupA.length; i++) {
+						System.out.printf("ï¿½×·ï¿½A %d %s \n", i + 1, user[classifyGroupA[i]]);
 
+					}
+					for (int i = 0; i < classifyGroupB.length; i++) {
+						System.out.printf("ï¿½×·ï¿½B %d %s \n", i + 1, user[classifyGroupB[i]]);
+
+					}
+					for (int i = 0; i < classifyGroupC.length; i++) {
+						System.out.printf("ï¿½×·ï¿½C %d %s \n", i + 1, user[classifyGroupC[i]]);
+
+					}
+
+				} catch (Exception e) {
+					System.out.println("ï¿½×·ì¿¡ ï¿½ï¿½ï¿½ÕµÇ´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½");
 				}
-				for (int i = 0; i < classifyGroupB.length; i++) {
-					System.out.printf("±×·ìB %d %s \n", i + 1, user[classifyGroupB[i]]);
-
-				}
-				for (int i = 0; i < classifyGroupC.length; i++) {
-					System.out.printf("±×·ìC %d %s \n", i + 1, user[classifyGroupC[i]]);
-
-				}
-
-			}catch (Exception e) {
-				System.out.println("±×·ì¿¡ ºÎÇÕµÇ´Â °í°´ÀÌ ¾ø½À´Ï´Ù");
 			}
-			}
-			// Á¾·á
+			// ï¿½ï¿½ï¿½ï¿½
 			else if (choice == 4) {
-				System.out.println("½Ã½ºÅÛÀÌ Á¾·áµÇ¾ú½À´Ï´Ù.");
+				System.out.println("ï¿½Ã½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 				break;
 			}
 
@@ -264,53 +273,55 @@ public class JavaProject {
 
 	}
 
-	// °í°´Á¤º¸ ÀÔ·Â
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
 	public static Customer userDataInput() {
-		System.out.println("³ªÀÌ: ");
+	
+		System.out.println("ï¿½ï¿½ï¿½ï¿½: ");
 		int age = sc.nextInt();
-		System.out.println("¼ºº° ");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ ");
 		String gender = sc.next();
-		System.out.println("ÀÎÅÍ³Ý ÀÌ¿ë½Ã°£: ");
+		System.out.println("ï¿½ï¿½ï¿½Í³ï¿½ ï¿½Ì¿ï¿½Ã°ï¿½: ");
 		int onlineTime = sc.nextInt();
-		System.out.println("°ÅÁÖÁö: ");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ");
 		String city = sc.next();
 		Customer customer_input = new Customer(age, gender, onlineTime, city);
 		return customer_input;
 	}
 
-	// °í°´Á¤º¸ ¼öÁ¤
-	// °í°´Á¤º¸ Ãâ·Â
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	public static void userDataPrint(int num) {
 		user[num] = userDataInput();
 		System.out.println(user[num]);
 
 	}
 
-	// ±×·ìÁ¤º¸ ÀÔ·Â
+	// ï¿½×·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
 	public static Group groupDataInput() {
-		System.out.println("ÃÖ¼Ò³ªÀÌ: ");
+
+		System.out.println("ï¿½Ö¼Ò³ï¿½ï¿½ï¿½: ");
 		int ageMin = sc.nextInt();
-		System.out.println("ÃÖ´ë³ªÀÌ: ");
+		System.out.println("ï¿½Ö´ë³ªï¿½ï¿½: ");
 		int ageMax = sc.nextInt();
-		System.out.println("¼ºº° ");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ ");
 		String gender = sc.next();
-		System.out.println("ÀÎÅÍ³Ý ÀÌ¿ë½Ã°£: ");
+		System.out.println("ï¿½ï¿½ï¿½Í³ï¿½ ï¿½Ì¿ï¿½Ã°ï¿½: ");
 		int onlineTime = sc.nextInt();
-		System.out.println("°ÅÁÖÁö: ");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ");
 		String city = sc.next();
 		Group group_input = new Group(ageMin, ageMax, gender, onlineTime, city);
 		return group_input;
 	}
 
-	// °í°´Á¤º¸ ¼öÁ¤
-	// °í°´Á¤º¸ Ãâ·Â
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	public static void groupDataPrint(int num) {
 		groupSet[num] = groupDataInput();
 		System.out.println(groupSet[num]);
 
 	}
 
-	// ±×·ìº°·Î °í°´¼ö ÀúÀå
+	// ï¿½×·ìº°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public static void classifyCustomer() {
 		int countA = 0;
 		int countB = 0;
@@ -333,7 +344,7 @@ public class JavaProject {
 		countA = 0;
 		countB = 0;
 		countC = 0;
-		// n±×·ì¿¡ °í°´ÀÌ µé¾î°¥¶§¸¶´Ù Ä«¿îÆ®1¾¿
+		// nï¿½×·ì¿¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½î°¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½ï¿½Æ®1ï¿½ï¿½
 		for (int uIdx = 0; uIdx < user.length; uIdx++) {
 			if (groupCheck(user[uIdx], 0)) {
 				classifyGroupA[countA++] = uIdx;
@@ -346,7 +357,7 @@ public class JavaProject {
 
 	}
 
-	// ±×·ì ºÐ·ù ÇÔ¼ö
+	// ï¿½×·ï¿½ ï¿½Ð·ï¿½ ï¿½Ô¼ï¿½
 	public static boolean groupCheck(Customer user, int idx) {
 		return groupSet[idx].getMinAge() <= user.getAge() && groupSet[idx].getMaxAge() >= user.getAge()
 				&& groupSet[idx].getUi().getGender().equals(user.getUi().getGender())
